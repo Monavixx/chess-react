@@ -1,0 +1,48 @@
+:root {
+    --size-of-piece: 50px
+}
+
+.piece {
+    width:var(--size-of-piece);
+    height:var(--size-of-piece);
+    background-color: rgb(151, 46, 46);
+    box-sizing: border-box;
+}
+.piece>button {
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    width: var(--size-of-piece);
+    height: var(--size-of-piece);
+    background-color: rgba(255, 255, 255, 0);
+}
+.piece>button>img {
+    width: var(--size-of-piece);
+    height: var(--size-of-piece);
+}
+
+
+.piece:nth-child(-2n+8),
+.piece:nth-child(n+9):nth-child(-2n+15),
+.piece:nth-child(n+18):nth-child(-2n+24),
+.piece:nth-child(n+24):nth-child(-2n+31),
+.piece:nth-child(n+33):nth-child(-2n+40),
+.piece:nth-child(n+40):nth-child(-2n+47),
+.piece:nth-child(n+49):nth-child(-2n+56),
+.piece:nth-child(n+56):nth-child(-2n+63) {
+    background-color: rgb(68, 62, 62);
+}
+
+.highlight {
+    border: 1px solid yellow;
+}
+.available-move {
+    background-color: rgba(28, 112, 28, 0.466) !important;
+}
+
+.chessboard {
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+}
